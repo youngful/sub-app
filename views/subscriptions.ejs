@@ -1,0 +1,113 @@
+<!-- views/subscription.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscription Plans</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- Plan 1 -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Basic Plan</h5>
+          <p class="card-text">Price: $99</p>
+          <p class="card-text">Duration: 30 days</p>
+          <p class="card-text">Description: Ideal for small households</p>
+            <form action="/subscribe/?userId=<%= user.id %>" method="post">
+                <input type="hidden" name="plan" value="basic">
+                <input type="hidden" name="price" value="99">
+                <input type="hidden" name="duration" value="30">
+                <input type="hidden" name="description" value="Ideal for small households">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 2 -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Standard Plan</h5>
+          <p class="card-text">Price: $149</p>
+          <p class="card-text">Duration: 60 days</p>
+          <p class="card-text">Description: Perfect for medium-sized households</p>
+            <form action="/subscribe/?userId=<%= user.id %>" method="post">
+                <input type="hidden" name="plan" value="standard">
+                <input type="hidden" name="price" value="149">
+                <input type="hidden" name="duration" value="60">
+                <input type="hidden" name="description" value="Perfect for medium-sized households">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 3 -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Premium Plan</h5>
+          <p class="card-text">Price: $199</p>
+          <p class="card-text">Duration: 90 days</p>
+          <p class="card-text">Description: Ideal for large households with extra features</p>
+            <form action="/subscribe/?userId=<%= user.id %>" method="post">
+                <input type="hidden" name="plan" value="premium">
+                <input type="hidden" name="price" value="199">
+                <input type="hidden" name="duration" value="90">
+                <input type="hidden" name="description" value="Ideal for large households with extra features">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 4 -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Deluxe Plan</h5>
+          <p class="card-text">Price: $249</p>
+          <p class="card-text">Duration: 120 days</p>
+          <p class="card-text">Description: Ultimate package for maximum benefits</p>
+            <form action="/subscribe/?userId=<%= user.id %>" method="post">
+                <input type="hidden" name="plan" value="deluxe">
+                <input type="hidden" name="price" value="249">
+                <input type="hidden" name="duration" value="120">
+                <input type="hidden" name="description" value="Ultimate package for maximum benefits">
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plan 5 -->
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Custom Plan</h5>
+          <p class="card-text">Tailored to your specific needs</p>
+          <p class="card-text">Solar Panel Capacity: Varies</p>
+          <p class="card-text">Price: Contact us for a quote</p>
+          <a href="/contact" class="btn btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="/" class="btn btn-secondary mt-3">Back to Home</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
